@@ -1,0 +1,26 @@
+{
+	"name": "lee-demo-app",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"format": "prettier --write .",
+		"dev": "dotenvx run -- swa start",
+		"swa": "swa"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"packageManager": "pnpm@10.12.4",
+	"devDependencies": {
+		"@azure/static-web-apps-cli": "^2.0.6",
+		"@dotenvx/dotenvx": "^1.47.6",
+		"prettier": "^3.6.2"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild",
+			"@tailwindcss/oxide"
+		]
+	}
+}

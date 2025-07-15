@@ -1,0 +1,30 @@
+type Message @model {
+	id: ID
+	SystemProperties: SystemProperties
+	iothub_name: String
+	Body: Body
+	_rid: String
+	_self: String
+	_etag: String
+	_attachments: String
+	_ts: Int
+}
+
+type SystemProperties {
+	message_id: String
+	iothub_connection_device_id: String
+	iothub_connection_auth_method: String
+	iothub_connection_auth_generation_id: String
+	iothub_content_type: String
+	iothub_content_encoding: String
+	iothub_enqueuedtime: String
+	iothub_message_source: String
+}
+
+type Body {
+	air_temp: String
+	water_pH: Float
+	water_temp: String
+	air_humidity: String
+	water_tubidity: String
+}
