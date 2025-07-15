@@ -1,19 +1,19 @@
 {
-  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
-  "configurations": {
-    "app": {
-      "appLocation": "web",
-      "apiLocation": "api",
-      "outputLocation": "build",
-      "apiLanguage": "node",
-      "apiVersion": "20",
-      "appBuildCommand": "pnpm run build",
-      "apiBuildCommand": "pnpm run build --if-present",
-      "run": "pnpm run dev",
-      "appDevserverUrl": "http://localhost:8080",
-      "dataApiLocation": "swa-db-connections",
-      "appName": "lee-demo-app",
-      "resourceGroup": "Learning"
-    }
-  }
+	"$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
+	"configurations": {
+		"app": {
+			"appLocation": "web",
+			"apiLocation": "api",
+			"outputLocation": "build",
+			"apiLanguage": "node",
+			"apiVersion": "20",
+			"appBuildCommand": "pnpm run build",
+			"apiBuildCommand": "pnpm run build --if-present",
+			"run": "pnpm run dev",
+			"appDevserverUrl": "http://localhost:8080",
+			"dataApiLocation": "swa-db-connections",
+			"appName": "demo-app",
+			"resourceGroup": "Learning"
+		}
+	}
 }
