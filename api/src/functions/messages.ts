@@ -2,7 +2,7 @@ import { app, HttpRequest, HttpResponseInit, InvocationContext } from '@azure/fu
 import { cosmosInput, cosmosOutput } from '../db';
 
 export type SystemProperties = {
-	message_id?: string;
+	'message-id'?: string;
 	iothub_connection_device_id?: string;
 	iothub_connection_auth_method?: string;
 	iothub_connection_auth_generation_id?: string;
@@ -38,24 +38,14 @@ export async function messages(
 ): Promise<HttpResponseInit> {
 	context.log(`Http function processed request for url "${request.url}"`);
 
-	const messages = <Message[]>context.extraInputs.get(cosmosInput);
+	const messages = <any[]>context.extraInputs.get(cosmosInput);
 
 	return {
 		status: 200,
 		headers: {
 			'Content-Type': 'application/json'
 		},
-		body: JSON.stringify(
-			messages.map((m) => ({
-				id: m.id,
-				air_temp: m.Body?.air_temp,
-				water_pH: m.Body?.water_pH,
-				water_temp: m.Body?.water_temp,
-				air_humidity: m.Body?.air_humidity,
-				water_tubidity: m.Body?.water_tubidity,
-				ts: m._ts * 1000 // Convert to milliseconds
-			}))
-		)
+		body: JSON.stringify(messages)
 	};
 }
 

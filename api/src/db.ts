@@ -6,7 +6,7 @@ const containerName = 'Message';
 export const cosmosInput = input.cosmosDB({
 	databaseName,
 	containerName,
-	sqlQuery: 'SELECT * FROM c',
+	sqlQuery: 'SELECT * FROM c ORDER BY c.Properties["iothub-creation-time-utc"] DESC',
 	connection: 'CosmosDBConnection'
 });
 

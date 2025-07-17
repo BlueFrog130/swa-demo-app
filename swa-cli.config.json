@@ -11,7 +11,6 @@
 			"apiBuildCommand": "pnpm run build --if-present",
 			"run": "pnpm run dev",
 			"appDevserverUrl": "http://localhost:8080",
-			"dataApiLocation": "swa-db-connections",
 			"appName": "demo-app",
 			"resourceGroup": "Learning"
 		}
